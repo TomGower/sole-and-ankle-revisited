@@ -54,13 +54,13 @@ const Overlay = styled(DialogOverlay)`
   left: 0;
   right: 0;
   bottom: 0;
-  background: ${COLORS.gray[700]};
+  background: var(--color-gray-700);
 `;
 
 const Content = styled(DialogContent)`
   text-transform: capitalize;
   position: relative;
-  background: ${COLORS.white};
+  background: var(--color-white);
   width: 75%;
 `;
 
@@ -81,7 +81,7 @@ const CloseButton = styled.button`
 `;
 
 const Nav = styled.nav`
-  color: ${COLORS.gray[900]};
+  color: var(--color-gray-900);
   font-size: 1.125rem;
   margin-left: 2rem;
   margin-top: auto;
@@ -89,7 +89,7 @@ const Nav = styled.nav`
 `;
 
 const Footer = styled.footer`
-  color: ${COLORS.gray[700]};
+  color: var(--color-gray-700);
   font-size: 0.875rem;
   display: flex;
   flex-direction: column;

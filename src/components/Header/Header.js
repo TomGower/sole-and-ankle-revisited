@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import { COLORS, QUERIES, WEIGHTS } from '../../constants';
+import { QUERIES } from '../../constants';
 import Logo from '../Logo';
 import SuperHeader from '../SuperHeader';
 import MobileMenu from '../MobileMenu';
@@ -31,11 +31,6 @@ const Header = () => {
           <NavLink href="/women">Women</NavLink>
           <NavLink href="/kids">Kids</NavLink>
           <NavLink href="/collections">Collections</NavLink>
-          <NavLink href="/collections">Collections</NavLink>
-          <NavLink href="/collections">Collections</NavLink>
-          <NavLink href="/collections">Collections</NavLink>
-          <NavLink href="/collections">Collections</NavLink>
-          <NavLink href="/collections">Collections</NavLink>
         </Nav>
         <Side />
         <MobileNav>
@@ -61,13 +56,14 @@ const Header = () => {
 };
 
 const MainHeader = styled.div`
+  /* --color-secondary: purple; */
   display: flex;
   align-items: baseline;
   padding: 18px 32px;
   height: 72px;
-  border-bottom: 1px solid ${COLORS.gray[300]};
-  /* overflow-x: scroll; */
-  overflow-x: scroll;
+  border-bottom: 1px solid var(--color-gray-900);
+  /* border-bottom: 1px solid blue; */
+  overflow-x: auto;
   overflow-y: hidden;
 
   @media ${QUERIES.mobile} {
@@ -83,7 +79,7 @@ const MobileSuperHeader = styled.div`
     display: inherit;
     width: 100%;
     height: 0.25rem;
-    background-color: ${COLORS.gray[900]};
+    background-color: var(--color-gray-900);
   }
 `;
 
@@ -109,11 +105,11 @@ const NavLink = styled.a`
   font-size: 1.125rem;
   text-transform: uppercase;
   text-decoration: none;
-  color: ${COLORS.gray[900]};
-  font-weight: ${WEIGHTS.medium};
+  color: var(--color-gray-900);
+  font-weight: var(--weight-medium);
 
   &:first-of-type {
-    color: ${COLORS.secondary};
+    color: var(--color-secondary);
   }
 `;
 
