@@ -31,6 +31,11 @@ const Header = () => {
           <NavLink href="/women">Women</NavLink>
           <NavLink href="/kids">Kids</NavLink>
           <NavLink href="/collections">Collections</NavLink>
+          <NavLink href="/collections">Collections</NavLink>
+          <NavLink href="/collections">Collections</NavLink>
+          <NavLink href="/collections">Collections</NavLink>
+          <NavLink href="/collections">Collections</NavLink>
+          <NavLink href="/collections">Collections</NavLink>
         </Nav>
         <Side />
         <MobileNav>
@@ -61,6 +66,9 @@ const MainHeader = styled.div`
   padding: 18px 32px;
   height: 72px;
   border-bottom: 1px solid ${COLORS.gray[300]};
+  /* overflow-x: scroll; */
+  overflow-x: scroll;
+  overflow-y: hidden;
 
   @media ${QUERIES.mobile} {
     padding-left: 1rem;
@@ -81,7 +89,11 @@ const MobileSuperHeader = styled.div`
 
 const Nav = styled.nav`
   display: flex;
-  gap: 48px;
+  gap: clamp(
+    1rem,
+    6vw - 2.5rem,
+    3rem
+  );
   margin: 0px 48px;
 
   @media ${QUERIES.tablet} {
